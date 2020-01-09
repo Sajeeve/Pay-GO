@@ -34,7 +34,7 @@
 								<ul class="d-flex flex-row align-items-start justify-content-start">
 									<li class="active"><a href="/">Home</a></li>
 									<li><a href="about">About us</a></li>
-									<li><a href="destinations">Services</a></li>
+									<li><a href="destinations">Holidays</a></li>
 									<li><a href="news">News</a></li>
 									<li><a href="contact">Contact</a></li>
 									{% if user.is_authenticated %}
@@ -86,7 +86,7 @@
 			<ul>
 				<li><a href="/">Home</a></li>
 				<li><a href="about">About us</a></li>
-				<li><a href="destinations">Services</a></li>
+				<li><a href="destinations">Holidays</a></li>
 				<li><a href="news">News</a></li>
 				<li><a href="contact">Contact</a></li>
 				{% if user.is_authenticated %}
@@ -272,23 +272,7 @@
 				<div class="col">
 					<div class="destinations_container item_grid">
 
-						<!-- Destination -->
-						{% for dest in dests %}
-						<div class="destination item">
-							<div class="destination_image">
-								<img src="{{dest.img.url}}" alt="">
-								
-								{% if dest.offer %}
-									<div class="spec_offer text-center"><a href="#">Special Offer</a></div>
-								{% endif %}
-							</div>
-							<div class="destination_content">
-								<div class="destination_title"><a href="destinations.html">{{dest.name}}</a></div>
-								<div class="destination_subtitle"><p>{{dest.desc}}</p></div>
-								<div class="destination_price">{{dest.price}}</div>
-							</div>
-						</div>
-						{% endfor %}
+						
 					</div>
 				</div>
 			</div>
