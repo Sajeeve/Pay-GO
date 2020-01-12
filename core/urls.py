@@ -11,9 +11,13 @@ urlpatterns = [
     path('destinationsingapore', views.destinationsingapore , name='destinationsingapore'),
     path('destinationbali', views.destinationbali , name='destinationbali'),
     path('destinationdubai', views.destinationdubai , name='destinationdubai'),
-
     path('destinationmalaysia', views.destinationmalaysia , name='destinationmalaysia'),
     path('destinationbangkok', views.destinationbangkok , name='destinationbangkok'),
-    path('destinationindia', views.destinationindia , name='destinationindia')
+    path('destinationindia', views.destinationindia , name='destinationindia'),
+
+    path('book',views.book , name='book'),
+    path('booking_invoice', views.booking_invoice, name='booking_invoice'),
+
+    path('user_account',views.user_account, name='user_account')
     
 ]

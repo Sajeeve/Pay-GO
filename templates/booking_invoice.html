@@ -1,0 +1,133 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+	<title>Booking Form </title>
+   <!-- <link rel="stylesheet" type="text/css" href="{% static 'css/booking_bootstrap.min.css' %}"> -->
+
+	<!-- Custom stlylesheet -->
+	<link type="text/css" rel="stylesheet" href="{% static 'css/bookingstyle.css' %}" />
+
+
+</head>
+
+<body>
+	<div id="booking" class="section">
+		<div class="section-center">
+			<div class="container">
+				<div class="row">
+					<div class="booking-form">
+						<div class="form-header">
+							<h1>Invoice</h1>
+                        </div>
+						<form class="form-detail">
+                            {% csrf_token %}
+                       
+                            <table id="t01">
+                                <tr>
+                                  <td>
+                                      <div class="form-group">
+                                             <span class="form-label">Name :</span>
+                                        </div>
+                                  </td>
+                                  <td> 
+                                      <div class="form-group">
+                                            <span class="form-label">Mr.{{book.first_name}} {{book.first_name}}</span>
+                                        </div>
+                                   </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                               <span class="form-label">Contact details :</span>
+                                          </div>
+                                    </td>
+                                    <td> 
+                                        <div class="form-group">
+                                              <span class="form-label">{{book.address}} , {{book.zipcode}}</span>
+                                              <span class="form-label">{{book.phone}}</span>
+                                              <span class="form-label">{{book.email}}</span>
+                                          </div>
+                                     </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                        <div class="form-group">
+                                               <span class="form-label">Package :</span>
+                                          </div>
+                                    </td>
+                                    <td> 
+                                        <div class="form-group">
+                                              <span class="form-label"></span>
+                                          </div>
+                                     </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                        <div class="form-group">
+                                               <span class="form-label">Booked on :</span>
+                                          </div>
+                                    </td>
+                                    <td> 
+                                        <div class="form-group">
+                                              <span class="form-label"> {{book.visitday}}</span>
+                                          </div>
+                                     </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                        <div class="form-group">
+                                               <span class="form-label">No of persons :</span>
+                                          </div>
+                                    </td>
+                                    <td> 
+                                        <div class="form-group">
+                                              <span class="form-label"> {{book.no_of_people}}</span>
+                                          </div>
+                                     </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                        <div class="form-group">
+                                               <span class="form-label">Total Amount :</span>
+                                          </div>
+                                    </td>
+                                    <td> 
+                                        <div class="form-group">
+                                              <span class="form-label"> </span>
+                                          </div>
+                                     </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                        <div class="form-group">
+                                               <span class="form-label">Payment :</span>
+                                          </div>
+                                    </td>
+                                    <td> 
+                                        <div class="form-group">
+                                              <span class="form-label"> {{book.}} </span>
+                                          </div>
+                                     </td>
+                                  </tr>
+                              </table>
+                              <div class="form-group">
+                                <p>Your order has been successfully booked .You can collect the package voucher in any of our branch by climing your identity.</p>
+
+                           </div>
+                        </form>
+                        
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</html>
