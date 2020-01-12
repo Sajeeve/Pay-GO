@@ -944,7 +944,7 @@ section
 }
 .destination_content
 {
-
+ height: 200px;
 }
 .destination_title
 {
@@ -1002,6 +1002,12 @@ section
 	content: '';
 }
 .load_more_button
+{
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 51px;
+}
+.more_button
 {
 	margin-left: auto;
 	margin-right: auto;

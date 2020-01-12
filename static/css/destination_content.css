@@ -1,0 +1,44 @@
+.destination_text {
+    color: rgb(19, 4, 87);
+    margin-top: 20px;
+}
+.destination_info p , .row{
+    color: black;
+}
+
+.submit_btn{
+    margin-top: 50px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.pick_btn{
+    display: inline-block;
+  padding: 10px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.pick_btn:hover {background-color: #3e8e41}
+
+.pick_btn:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.thumb img {
+    height:150px;
+    width:200px;
+}
+
+.popular_places_areas{
+    margin-bottom: 20px;
+}

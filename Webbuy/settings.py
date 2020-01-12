@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'Webbuy.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME':'pay&go',
+        'NAME':'Pay&GO_DB',
         'USER' : 'postgres',
         'PASSWORD' : 'root',
         'HOST' : 'localhost'

@@ -191,17 +191,24 @@
 							</div>
 							<div class="destination_content">
 								<div class="destination_title"><a href="destinations.html">{{dest.name}}</a></div>
-								<div class="destination_subtitle"><p>{{dest.desc}}</p></div>
-								<div class="destination_price">{{dest.price}}</div>
+								<span class="d-flex justify-content-center align-items-center">
+									<i class="fa fa-star"></i> 
+									<i class="fa fa-star"></i> 
+									<i class="fa fa-star"></i> 
+									<i class="fa fa-star"></i> 
+									<i class="fa fa-star"></i>
+									<a href="#">(20 Review)</a>
+							   </span>
+								<div class="destination_price">Rs.{{dest.price}}</div>
+								<div class="destination_days">({{dest.days}})</div>
+								
+								<div class="destination_valid">{{dest.valid_till}}</div>
+								<div class="button more_button"><a href={{dest.url}}>more</a></div>
+
 							</div>
 						</div>
 						{% endfor %}
 					</div>
-				</div>
-			</div>
-			<div class="row load_more_row">
-				<div class="col">
-					<div class="button load_more_button"><a href="#">load more</a></div>
 				</div>
 			</div>
 		</div>
