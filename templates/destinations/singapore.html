@@ -124,10 +124,10 @@
 
 
 	<!-- Destinations -->
-
+	
 	<div class="destination_banner_wrap overlay">
         <div class="destination_text text-center">
-            <h3>Singapore</h3>
+            <h3>{{dests.name}}</h3>
             <p>Country in Asia</p>
         </div>
     </div>
@@ -139,10 +139,9 @@
                    
                     <div class="destination_info">
                         <h3>Description</h3>
-                        <p>
-                            Singapore, an island city-state off southern Malaysia, is a global financial center with a tropical climate and multicultural population. Its colonial core centers on the Padang, a cricket field since the 1830s and now flanked by grand buildings such as City Hall, with its 18 Corinthian columns. In Singapore's circa-1820 Chinatown stands the red-and-gold Buddha Tooth Relic Temple, said to house one of Buddha's teeth.
-                        </p>
-                        <hr>
+                        <p>{{dests.desc}}</p>
+						<hr>
+						<h4> Package type :</h4> <p>{{dests.category}}</p>
                         <hr>
                         <div class="single_destination">
                             <h4>Day-01</h4>
@@ -163,11 +162,13 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-6 col-sm-6">
+									
                                     <ul class = "inclusion_list"> <h4> Includes : </h4>
-                                        <li> Accommodation </li>
-                                        <li> Transportation by private AC car </li>
-                                        <li> English speaking chauffeur guide </li>
-                                    </ul>
+                                        <li> Accomodation </li>
+                                    	<li> Transportation by private AC car </li>
+										<li> English speaking chauffeur guide </li>
+									</ul>
+									
                                 </div>
                                 <div class="col-md-6 col-sm-6">
                                     <ul class = "inclusion_list"> <h4> Excludes : </h4>
@@ -178,14 +179,11 @@
                                  </div>
                             </div>
                         </div>
-                       
                     </div>
-                    <hr>
+					<hr>
+					<div class="single_destination"> <h3> Rs. {{dests.price}}</h3> (per person) </div>
                     <div class="col-lg-12">
-                        <div class="submit_btn">
-							<div class="button more_button"><a href="book">pick</a></div>
-						<!-- no use 
-							<button class="pick_btn" type="submit" onclick={book}> Pick It</button> -->   
+							<button class="pick_btn" type="submit" onclick="location.href='1/book'"> Pick It</button>
                         </div>
                     </div>
 
@@ -210,7 +208,7 @@
             <marquee direction="left">
             <div class="row">
                 {% for offered in offered_dests %}
-                <div class="col-lg-2 col-md-6">
+                <div class="col-lg-3 col-md-6">
                     <div class="single_place">
 							<div class="thumb">
                                 <img src="{{offered.img.url}}" alt="">    

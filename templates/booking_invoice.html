@@ -38,7 +38,7 @@
                                   </td>
                                   <td> 
                                       <div class="form-group">
-                                            <span class="form-label">Mr.{{book.first_name}} {{book.first_name}}</span>
+                                            <span class="form-label">Mr.{{book.user_name.first_name}} {{book.user_name.last_name}}</span>
                                         </div>
                                    </td>
                                 </tr>
@@ -52,19 +52,19 @@
                                         <div class="form-group">
                                               <span class="form-label">{{book.address}} , {{book.zipcode}}</span>
                                               <span class="form-label">{{book.phone}}</span>
-                                              <span class="form-label">{{book.email}}</span>
+                                              <span class="form-label">{{book.user_name.email}}</span>
                                           </div>
                                      </td>
                                   </tr>
                                   <tr>
                                     <td>
                                         <div class="form-group">
-                                               <span class="form-label">Package :</span>
+                                               <span class="form-label">Destination :</span>
                                           </div>
                                     </td>
                                     <td> 
                                         <div class="form-group">
-                                              <span class="form-label"></span>
+                                              <span class="form-label">{{book.package.name}}</span>
                                           </div>
                                      </td>
                                   </tr>
@@ -100,7 +100,7 @@
                                     </td>
                                     <td> 
                                         <div class="form-group">
-                                              <span class="form-label"> </span>
+                                              <span class="form-label"> {{book.package.price}} * {{book.no_of_people}}</span>
                                           </div>
                                      </td>
                                   </tr>
@@ -112,7 +112,7 @@
                                     </td>
                                     <td> 
                                         <div class="form-group">
-                                              <span class="form-label"> {{book.}} </span>
+                                              <span class="form-label">{{book.payment}} </span>
                                           </div>
                                      </td>
                                   </tr>

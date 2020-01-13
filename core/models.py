@@ -27,20 +27,18 @@ class Includes (models.Model) :
 
 class Booking (models.Model) :
     
-    user_name = models.CharField(max_length=30)
-    first_name = models.CharField(max_length=30)
-    last_name = models.CharField(max_length=30)
+    user_name = models.ForeignKey(User, on_delete=models.CASCADE)
+    package = models.ForeignKey(Destinations, on_delete=models.CASCADE)
 
-    email = models.EmailField(max_length=254)
-    
     phone = models.IntegerField()
     address = models.TextField()
     zipcode= models.IntegerField()
 
     visitday = models.DateField(blank =True , null = True ) 
     no_of_people = models.IntegerField() 
-    anything_else = models.TextField()
     payment = models.CharField(max_length=30)
+
+    anything_else = models.TextField()
 
     def __str__(self):
         return self.name

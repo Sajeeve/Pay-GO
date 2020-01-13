@@ -15,9 +15,8 @@ urlpatterns = [
     path('destinationbangkok', views.destinationbangkok , name='destinationbangkok'),
     path('destinationindia', views.destinationindia , name='destinationindia'),
 
-    path('book',views.book , name='book'),
-    path('booking_invoice', views.booking_invoice, name='booking_invoice'),
-
+     path('<int:dests_id>/book',views.book , name='book'),
+    path('<int:dests_id>/book/booking_invoice', views.booking_invoice, name='booking_invoice'),
     path('user_account',views.user_account, name='user_account')
     
 ]
