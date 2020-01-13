@@ -33,14 +33,14 @@
 							<ul class="d-flex flex-row align-items-start justify-content-start">
 								<li ><a href="/">Home</a></li>
 								<li ><a href="about">About us</a></li>
-								<li class="active"><a href="destinations">Holidays</a></li>
+								<li class="active"><a href="destinations">Destinations</a></li>
 								<li><a href="news"> News</a></li>
 								<li><a href="contact">Contact</a></li>
 								{% if user.is_authenticated %}
 								<li>
 									<a class="nav-profile" id="navbarDropdownMenuLink-4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user"></i> Profile </a>
 									<div class="dropdown-menu dropdown-menu-right dropdown-cyan" aria-labelledby="navbarDropdownMenuLink-4">
-										<a class="dropdown-item" href="#">My account</a>
+										<a class="dropdown-item" href="user_account">My account</a>
 										<a class="dropdown-item" href="accounts/logout">Log out</a>
 									</div>
 								</li>
@@ -85,14 +85,14 @@
 		<ul>
 			<li><a href="/">Home</a></li>
 			<li><a href="about">About us</a></li>
-			<li><a href="destinations">Services</a></li>
+			<li><a href="destinations">Destinations</a></li>
 			<li><a href="news">News</a></li>
 			<li ><a href="contact">Contact</a></li>
 			{% if user.is_authenticated %}
 				<li>
 					<a class="nav-profile" id="navbarDropdownMenuLink-4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user"></i> Profile </a>
 					<div class="dropdown-menu dropdown-menu-right dropdown-cyan" aria-labelledby="navbarDropdownMenuLink-4">
-						<a class="dropdown-item" href="#">My account</a>
+						<a class="dropdown-item" href="user_account">My account</a>
 						<a class="dropdown-item" href="accounts/logout">Log out</a>
 					</div>
 				</li>
@@ -121,31 +121,6 @@
 		<div class="background_image" style="background-image:url({% static 'images/destinations.jpg' %})"></div>
 	</div>
 
-	<!-- Search -->
-	<!--
-	<div class="home_search">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<div class="home_search_container">
-						<div class="home_search_title">Search for your trip</div>
-						<div class="home_search_content">
-							<form action="#" class="home_search_form" id="home_search_form">
-								<div class="d-flex flex-lg-row flex-column align-items-start justify-content-lg-between justify-content-start">
-									<input type="text" class="search_input search_input_1" placeholder="City" required="required">
-									<input type="text" class="search_input search_input_2" placeholder="Departure" required="required">
-									<input type="text" class="search_input search_input_3" placeholder="Arrival" required="required">
-									<input type="text" class="search_input search_input_4" placeholder="Budget" required="required">
-									<button class="home_search_button">search</button>
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	-->
 	<!-- Destinations -->
 
 	<div class="destinations" id="destinations">

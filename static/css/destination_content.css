@@ -6,25 +6,21 @@
     color: black;
 }
 
-.submit_btn{
-    margin-top: 50px;
-    text-align: center;
-    margin-bottom: 50px;
-}
+
 
 .pick_btn{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
     display: inline-block;
-  padding: 10px 25px;
-  font-size: 24px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-  color: #fff;
-  background-color: #4CAF50;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 9px #999;
+    font-size: 16px;
+    margin: 4px 180px;
+    cursor: pointer;
+    border-radius: 8px;
+    width:150px;
 }
 
 .pick_btn:hover {background-color: #3e8e41}

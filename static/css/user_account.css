@@ -1,0 +1,23 @@
+.section{
+    width: 100%; 
+    background-color: khaki;
+    
+}
+
+.form-header {
+	text-align: center;
+	margin-bottom:15px;
+	margin-top: 0;
+}
+.section .table-container{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+table#t01 {
+    margin: 0 auto;
+    padding:25px;  
+    width: 500px;
+	background-color: #1d1d19;
+	
+  }

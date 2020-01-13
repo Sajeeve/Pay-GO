@@ -127,7 +127,7 @@
 
 	<div class="destination_banner_wrap overlay">
         <div class="destination_text text-center">
-            <h3>Dubai</h3>
+            <h3>{{dests.name}}</h3>
             <p>City in the United Arab Emirates</p>
         </div>
     </div>
@@ -139,10 +139,9 @@
                    
                     <div class="destination_info">
                         <h3>Description</h3>
-                        <p>
-                            Dubai is a city and emirate in the United Arab Emirates known for luxury shopping, ultramodern architecture and a lively nightlife scene. Burj Khalifa, an 830m-tall tower, dominates the skyscraper-filled skyline. At its foot lies Dubai Fountain, with jets and lights choreographed to music. On artificial islands just offshore is Atlantis, The Palm, a resort with water and marine-animal parks.
-                        </p>
+                        <p>{{dests.desc}}</p>
                         <hr>
+						<h4> Package type :</h4> <p>{{dests.category}}</p>
                         <hr>
                         <div class="single_destination">
                             <h4>Day-01</h4>
@@ -181,9 +180,11 @@
                        
                     </div>
                     <hr>
+					<div class="single_destination"> <h3> Rs. {{dests.price}}</h3> (per person) </div>
+					<hr>
                     <div class="col-lg-12">
                         <div class="submit_btn">
-                            <button class="pick_btn" type="submit">Pick It</button>
+                            <button class="pick_btn" type="submit" onclick="location.href='2/book'">Pick It</button>
                         </div>
                     </div>
 

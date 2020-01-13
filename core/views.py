@@ -37,28 +37,29 @@ def destinationsingapore(request):
     return render (request,'destinations\singapore.html', {'dests':dests , 'offered_dests' : offered_dests})
 
 def destinationbali(request):
-    offered_dests = Destinations.objects.all()
-    return render (request,'destinations\Bbali.html', {'offered_dests':offered_dests})
+    dests = Destinations.objects.get(name ="Bali")
+    offered_dests = Destinations.objects.exclude(name ="Bali")
+    return render (request,'destinations\Bbali.html', {'dests':dests , 'offered_dests' : offered_dests})
 
 def destinationbangkok(request):
-    offered_dests = Destinations.objects.all()
-    return render (request,'destinations\Bbangkok.html', {'offered_dests':offered_dests})
+   dests = Destinations.objects.get(name = "Bangkok")
+   offered_dests = Destinations.objects.exclude(name = "Bangkok")
+   return render (request,'destinations\Bbangkok.html', {'dests':dests , 'offered_dests' : offered_dests})
 
 def destinationdubai(request):
-    dests = Destinations.objects.all()
-    offered_dests = Destinations.objects.exclude(name = 'dests.name')
+    dests = Destinations.objects.get(name = "Dubai")
+    offered_dests = Destinations.objects.exclude(name = "Dubai")
     return render (request,'destinations\dubai.html', {'dests':dests , 'offered_dests' : offered_dests})
 
 def destinationindia(request):
-    dests = Destinations.objects.all()
-    offered_dests = Destinations.objects.exclude(name = 'dests.name')
+    dests = Destinations.objects.get(name = "India")
+    offered_dests = Destinations.objects.exclude(name = "India")
     return render (request,'destinations\india.html', {'dests':dests , 'offered_dests' : offered_dests})
 
 def destinationmalaysia(request):
-    dests = Destinations.objects.all()
-    offered_dests = Destinations.objects.exclude(name = 'dests.name')
+    dests = Destinations.objects.get(name = "Malayasia")
+    offered_dests = Destinations.objects.exclude(name = "Malayasia")
     return render (request,'destinations\malaysia.html', {'dests':dests , 'offered_dests' : offered_dests})
-
 
 def book (request ,dests_id):
 
@@ -88,7 +89,6 @@ def book (request ,dests_id):
 def booking_invoice(request,dests_id):
     book = Booking.objects.get(user_name =3)
     return render (request,'booking_invoice.html',{'book':book})
-
 
 def user_account(request):
     return render(request,'user_account.html')

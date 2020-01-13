@@ -26,7 +26,7 @@
 						<div class="form-header">
 							<h1>Invoice</h1>
                         </div>
-						<form class="form-detail">
+						<form class="form-detail" href="user_account" method="POST">
                             {% csrf_token %}
                        
                             <table id="t01">
@@ -119,7 +119,7 @@
                               </table>
                               <div class="form-group">
                                 <p>Your order has been successfully booked .You can collect the package voucher in any of our branch by climing your identity.</p>
-
+                                <button class="submit-btn" onclick="location.href='user_account'" >ok</button>
                            </div>
                         </form>
                         
