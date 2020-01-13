@@ -1,6 +1,6 @@
 from django.shortcuts import render , redirect
-from . models import Destinations , Includes , Booking , User
-
+from . models import Destinations , Includes , Booking , User ,Contact
+from django.contrib import messages
 
 # Create your views here.
 def index(request):
@@ -10,16 +10,18 @@ def about(request):
     return render (request,'about.html')
 
 def contact(request):
-    # if request.method == 'POST':
-    #   name = request.POST['name'] 
-    #   email = request.POST['email']
-     #  subject = request.POST['subject']
-     #  message = request.POST['message']
+    if request.method == 'POST':
+       name = request.POST['name'] 
+       email = request.POST['email']
+       subject = request.POST['subject']
+       message = request.POST['message']
        
-       # user = User.objects.create_user(first_name=first_name , last_name=last_name, username =user_name ,email=email,password=password1)
-       # user.save()
-       # return redirect('/')
-   # else:
+       cnt = Contact(name=name , email=email, subject =subject ,message=message)
+       cnt.save()
+       messages.info(request,'Sent Successfully ....')
+       return render(request,'contact.html')
+
+    else :
         return render(request,'contact.html')
 
 def news(request):

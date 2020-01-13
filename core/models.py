@@ -26,7 +26,6 @@ class Includes (models.Model) :
         return self.name
 
 class Booking (models.Model) :
-    
     user_name = models.ForeignKey(User, on_delete=models.CASCADE)
     package = models.ForeignKey(Destinations, on_delete=models.CASCADE)
 
@@ -41,5 +40,13 @@ class Booking (models.Model) :
     anything_else = models.TextField()
 
     def __str__(self):
-        return self.name
+        return str(self.user_name)
     
+class Contact(models.Model):
+    name =models.CharField(max_length=100)
+    email = models.EmailField(max_length=254)
+    subject =models.CharField(max_length=100)
+    message = models.TextField()
+
+    def __str__(self):
+        return str(self.email)
