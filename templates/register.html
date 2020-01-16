@@ -15,7 +15,7 @@
 	<div class="page-content">
 		<div class="form-v8-content">
 			<div class="form-left">
-				<img src="{% static 'images/form-v8.jpg' %}" alt="form">
+				<img class="regimg" src="{% static 'images/form-v8.jpg' %}" alt="form">
 			</div>
 			<div class="form-right">
 				<form class="form-detail" action="register" method="post">
@@ -69,8 +69,9 @@
 							</label>
 						</div>
 						<div class="form-row-last">
-							<input type="submit" name="register" class="register" value="Register">
-							<a href="/"> Cancel </a>
+							<input type="submit" name="register" class="login" value="Register">
+							<label class="link_name"> <a href="/" >Cancel</a> </label>
+		
 						</div>
 					</div>
 				</form>
